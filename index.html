@@ -55,17 +55,18 @@
 <body>
     <div class="container" style="position:relative;min-height:100vh;background:#F3F6FB;">
         <!-- Top bar -->
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:2em 2em 0 2em;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:2em 2em 0 2em;position:relative;z-index:2;">
             <div style="font-family:cursive;font-size:2em;font-weight:bold;">HR</div>
-            <a href="resume.html" style="font-size:1.5em;font-weight:500;text-decoration:none;color:#181A20;">Resume</a>
-            <a href="contact.html" id="sayhi" style="font-size:1.2em;font-weight:500;text-decoration:none;color:#181A20;">Say hi..</a>
+            <a href="resume.html" style="font-size:1.5em;font-weight:500;text-decoration:none;color:#181A20;z-index:2;position:relative;">Resume</a>
+            <a href="contact.html" id="sayhi" style="font-size:1.2em;font-weight:500;text-decoration:none;color:#181A20;z-index:2;position:relative;">Say hi..</a>
         </div>
         <!-- Left vertical nav -->
         <div style="position:absolute;top:50%;left:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:1.5em;">
             <a href="projects.html" style="writing-mode:vertical-rl;text-orientation:mixed;font-size:1.2em;font-weight:600;letter-spacing:0.1em;color:#181A20;text-decoration:none;">Projects</a>
-            <a href="https://github.com/Harish0403hari" target="_blank" class="social-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="32" height="32"/></a>
-            <a href="https://twitter.com/harish0403hari" target="_blank" class="social-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" width="32" height="32"/></a>
-            <a href="mailto:harish192415@gmail.com" class="social-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="32" height="32"/></a>
+            <a href="https://www.linkedin.com/in/harish-kumar-r0403/" target="_blank" class="social-icon" title="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="32" height="32"/></a>
+            <a href="https://github.com/Harish0403hari" target="_blank" class="social-icon" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="32" height="32"/></a>
+            <a href="https://twitter.com/harish0403hari" target="_blank" class="social-icon" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" width="32" height="32"/></a>
+            <a href="mailto:harish192415@gmail.com" class="social-icon" title="Email"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="32" height="32"/></a>
         </div>
         <!-- Right vertical nav -->
         <div style="position:absolute;top:50%;right:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:1.5em;">
@@ -78,21 +79,10 @@
         <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;">
             <img src="giphy.gif" alt="Kung Fu Panda" />
             <br>
-                    <a href="introduce.html" id="showIntroBtn" style="margin-top:1.2em;display:inline-block;font-size:1.15em;font-weight:600;color:#800000;background:#FFD700;border:2px solid #800000;border-radius:8px;padding:0.5em 1.2em;text-decoration:none;box-shadow:0 2px 8px rgba(128,0,0,0.10);transition:box-shadow 0.3s,background 0.3s;cursor:pointer;">Click Here</a>
-                <!-- Modal removed, now navigates to introduce.html -->
-            </style>
+            <a href="introduce.html" id="showIntroBtn" style="margin-top:1.2em;display:inline-block;font-size:1.15em;font-weight:600;color:#800000;background:#FFD700;border:2px solid #800000;border-radius:8px;padding:0.5em 1.2em;text-decoration:none;box-shadow:0 2px 8px rgba(128,0,0,0.10);transition:box-shadow 0.3s,background 0.3s;cursor:pointer;">Click Here</a>
         </div>
     </div>
-    <script>
-    document.getElementById('showIntroBtn').onclick = function() {
-        var modal = document.getElementById('introModal');
-        modal.style.display = 'block';
-    };
-    document.getElementById('closeIntroModal').onclick = function() {
-        var modal = document.getElementById('introModal');
-        modal.style.display = 'none';
-    };
-    </script>
+    <!-- No modal script needed, direct navigation only -->
     <script src="script.js"></script>
 </body>
 </html>
