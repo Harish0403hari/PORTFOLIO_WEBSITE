@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harish kumar Rajaram | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23800000'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dominant-baseline='central' font-size='32' font-family='Playfair Display, serif' fill='%23FFD700'%3EHR%3C/text%3E%3C/svg%3E"/>
     <link rel="stylesheet" href="style.css">
     <style>
         html {
@@ -62,7 +63,6 @@
         <!-- Left vertical nav -->
         <div style="position:absolute;top:50%;left:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:1.5em;">
             <a href="projects.html" style="writing-mode:vertical-rl;text-orientation:mixed;font-size:1.2em;font-weight:600;letter-spacing:0.1em;color:#181A20;text-decoration:none;">Projects</a>
-            <a href="https://www.linkedin.com/in/harish-kumar-r0403/" target="_blank" class="social-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="32" height="32"/></a>
             <a href="https://github.com/Harish0403hari" target="_blank" class="social-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="32" height="32"/></a>
             <a href="https://twitter.com/harish0403hari" target="_blank" class="social-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" width="32" height="32"/></a>
             <a href="mailto:harish192415@gmail.com" class="social-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="32" height="32"/></a>
@@ -76,10 +76,23 @@
         <div style="position:absolute;bottom:2em;right:2em;font-size:1.2em;font-weight:500;"><a href="skills.html" style="color:#181A20;text-decoration:none;">My Skills</a></div>
         <!-- Center GIF -->
         <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;">
-            <img src="https://media.giphy.com/media/3o6ZtpxSZbQRRnwCKQ/giphy.gif" alt="Kung Fu Panda" style="width:260px;height:260px;border-radius:50%;box-shadow:0 2px 12px rgba(0,191,255,0.10);"/>
-            <div style="margin-top:1em;font-size:1.1em;color:#181A20;">click here</div>
+            <img src="giphy.gif" alt="Kung Fu Panda" />
+            <br>
+                    <a href="introduce.html" id="showIntroBtn" style="margin-top:1.2em;display:inline-block;font-size:1.15em;font-weight:600;color:#800000;background:#FFD700;border:2px solid #800000;border-radius:8px;padding:0.5em 1.2em;text-decoration:none;box-shadow:0 2px 8px rgba(128,0,0,0.10);transition:box-shadow 0.3s,background 0.3s;cursor:pointer;">Click Here</a>
+                <!-- Modal removed, now navigates to introduce.html -->
+            </style>
         </div>
     </div>
+    <script>
+    document.getElementById('showIntroBtn').onclick = function() {
+        var modal = document.getElementById('introModal');
+        modal.style.display = 'block';
+    };
+    document.getElementById('closeIntroModal').onclick = function() {
+        var modal = document.getElementById('introModal');
+        modal.style.display = 'none';
+    };
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

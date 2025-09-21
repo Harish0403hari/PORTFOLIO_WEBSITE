@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce Myself | Harish kumar Rajaram</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(90deg, #181A20 50%, #f7f3ef 50%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Merriweather', 'Georgia', serif;
+        }
+        .intro-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            width: 760px;
+            max-width: 98vw;
+            min-height: 340px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(128,0,0,0.18);
+            border: 2.5px solid #FFD700;
+            overflow: hidden;
+        }
+        .intro-left {
+            flex: 1.2;
+            background: #181A20;
+            color: #FFD700;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2em 2em 2em 2.5em;
+        }
+        .intro-left h2 {
+            font-size: 2em;
+            margin: 0 0 0.7em 0;
+            letter-spacing: 0.01em;
+        }
+        .intro-left .intro-text {
+            font-size: 1.15em;
+            line-height: 1.7;
+            margin: 0;
+            word-break: break-word;
+            max-width: 98%;
+        }
+        .intro-right {
+            flex: 1;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .intro-right img {
+            max-width: 180px;
+            max-height: 260px;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(128,0,0,0.10);
+            border: 2px solid #FFD700;
+            background: #fff;
+        }
+        @media (max-width: 900px) {
+            .intro-container {
+                flex-direction: column;
+                min-height: 320px;
+                height: auto;
+            }
+            .intro-left, .intro-right {
+                flex: none;
+                width: 100%;
+                min-height: 180px;
+                padding: 2em 1em;
+            }
+            .intro-right img {
+                max-width: 90vw;
+                max-height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <div class="intro-left">
+            <h2>Hi,</h2>
+            <div class="intro-text">Hello, my name is Harish Kumar Rajaram. I am a final year Computer Science Engineering student from RMK Engineering College with a CGPA of 8.03. I have hands-on experience in web development and data analytics through internships and projects, and my technical skills include Java, Python, SQL, JavaScript, and cloud technologies. I am a quick learner, team player, and always eager to explore new technologies. My goal is to start my career in a role where I can apply my skills and grow further.</div>
+        </div>
+        <div class="intro-right">
+            <img src="giphy.gif" alt="Panda GIF">
+        </div>
+    </div>
+</body>
+</html>
