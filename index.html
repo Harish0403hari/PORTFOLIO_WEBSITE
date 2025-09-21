@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Removed duplicate navbar -->
+        <nav class="bg-gray-900 text-white shadow">
+            <div class="container mx-auto flex items-center justify-between py-4 px-6">
+                <div class="text-2xl font-bold">My Portfolio</div>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover:text-yellow-400 font-semibold">Home</a></li>
+                    <li><a href="#about" class="hover:text-yellow-400 font-semibold">About</a></li>
+                    <li><a href="#projects" class="hover:text-yellow-400 font-semibold">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-400 font-semibold">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-8 right-8 bg-yellow-400 text-gray-900 font-bold px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition-opacity opacity-0 pointer-events-none z-50">
+        ↑ Top
+    </button>
+    <section id="home">
+        <div class="container mx-auto py-16 px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900">Welcome to My Portfolio</h1>
+            <p class="text-lg text-gray-600 max-w-xl mx-auto">Discover my work and experience.</p>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container mx-auto py-16 px-6 flex flex-col md:flex-row items-center gap-8">
+            <div>
+                <h2 class="text-3xl font-bold mb-4 text-gray-900">About Me</h2>
+                <p class="text-lg text-gray-600">Hello! I'm a passionate developer eager to create impactful web experiences.</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container mx-auto py-16 px-6">
+            <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Portfolio Website</h3>
+                    <p class="text-gray-600 mb-4">A personal website to showcase my skills and projects. Built with HTML, CSS, and JavaScript.</p>
+                    <a href="https://github.com/yourusername/portfolio-website" target="_blank" class="mt-auto inline-block bg-yellow-400 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition">View on GitHub</a>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Weather App</h3>
+                    <p class="text-gray-600 mb-4">A simple weather application that fetches real-time data using a public API.</p>
+                    <a href="https://github.com/yourusername/weather-app" target="_blank" class="mt-auto inline-block bg-yellow-400 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition">View on GitHub</a>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">Task Manager</h3>
+                    <p class="text-gray-600 mb-4">A web-based task manager to organize daily activities and boost productivity.</p>
+                    <a href="https://github.com/yourusername/task-manager" target="_blank" class="mt-auto inline-block bg-yellow-400 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container mx-auto py-16 px-6">
+            <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">Contact Me</h2>
+            <form id="contactForm" class="max-w-lg mx-auto bg-white rounded-xl shadow-lg p-8 flex flex-col gap-6">
+                <input type="text" name="name" placeholder="Your Name" required class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                <input type="email" name="email" placeholder="Your Email" required class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                <textarea name="message" placeholder="Your Message" required class="border border-gray-300 rounded px-4 py-2 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+                <button type="submit" class="bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded hover:bg-yellow-300 transition">Send</button>
+            </form>
+            <div id="formMessage" class="mt-4 text-green-600 font-bold text-center"></div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script>
+    // Scroll-to-top button logic
+    const scrollBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollBtn.classList.remove('opacity-0', 'pointer-events-none');
+            scrollBtn.classList.add('opacity-100');
+        } else {
+            scrollBtn.classList.add('opacity-0', 'pointer-events-none');
+            scrollBtn.classList.remove('opacity-100');
+        }
+    });
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    </script>
+</body>
+</html>
