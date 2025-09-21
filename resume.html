@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Harish kumar Rajaram</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .resume-container {
+            max-width: 800px;
+            margin: 3em auto;
+            background: #222E36;
+            color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,191,255,0.10);
+            padding: 2em 2em 3em 2em;
+        }
+        .resume-title {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 1em;
+            color: #00BFFF;
+            text-align: center;
+        }
+        .resume-section {
+            margin-bottom: 2em;
+        }
+        .resume-section h3 {
+            color: #00BFFF;
+            margin-bottom: 0.5em;
+        }
+        .resume-list {
+            list-style: none;
+            padding: 0;
+        }
+        .resume-list li {
+            margin-bottom: 0.7em;
+        }
+        .resume-contact {
+            text-align: center;
+            margin-top: 2em;
+        }
+        .resume-contact a {
+            color: #00BFFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div style="position:relative;width:100%;">
+        <!-- Home Arrow Centered Top -->
+        <a href="index.html" style="position:absolute;top:2em;left:50%;transform:translateX(-50%);z-index:21;background:none;padding:0;">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="18" fill="#00BFFF"/>
+              <path d="M20 12L14 18L20 24" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <!-- Vertical nav right -->
+        <div style="position:absolute;top:50%;right:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:1.5em;">
+            <a href="about.html" class="nav-link" style="margin-bottom:1em;">About</a>
+            <a href="projects.html" class="nav-link" style="margin-bottom:1em;">Projects</a>
+            <a href="skills.html" class="nav-link" style="margin-bottom:1em;">Skills</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+        </div>
+    </div>
+    <div class="resume-container fade-in">
+        <div class="resume-title fade-in">Harish kumar Rajaram</div>
+        <div class="resume-contact fade-in">
+            <span>Email: <a href="mailto:harish192415@gmail.com">harish192415@gmail.com</a></span> | 
+            <span>LinkedIn: <a href="https://linkedin.com/in/harish0403hari" target="_blank">harish0403hari</a></span>
+        </div>
+        <div style="text-align:center;margin:2em 0;">
+            <div style="position:relative;display:inline-block;width:100%;">
+                <iframe src="resume.pdf" width="100%" height="600px" style="border-radius:12px;border:1px solid #00BFFF;box-shadow:0 2px 12px rgba(0,191,255,0.10);"></iframe>
+                <button id="menuBtn" style="position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#222E36"/><circle cx="10" cy="16" r="2" fill="#fff"/><circle cx="16" cy="16" r="2" fill="#fff"/><circle cx="22" cy="16" r="2" fill="#fff"/></svg>
+                </button>
+                <div id="menuDropdown" style="display:none;position:absolute;top:48px;right:16px;background:#222E36;border-radius:8px;box-shadow:0 2px 8px rgba(0,191,255,0.10);padding:0.5em 1em;z-index:100;">
+                    <a href="resume.pdf" download style="color:#fff;text-decoration:none;font-weight:500;">Download Resume PDF</a>
+                </div>
+            </div>
+            <script>
+                const menuBtn = document.getElementById('menuBtn');
+                const menuDropdown = document.getElementById('menuDropdown');
+                menuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menuDropdown.style.display = menuDropdown.style.display === 'block' ? 'none' : 'block';
+                });
+                document.addEventListener('click', function() {
+                    menuDropdown.style.display = 'none';
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>

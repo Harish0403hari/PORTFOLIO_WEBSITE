@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Harish kumar Rajaram</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2em;
+            justify-items: center;
+            align-items: center;
+            background: #222E36;
+            padding: 2em;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,191,255,0.10);
+            margin-top: 2em;
+        }
+        .skill-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            background: #181A20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: box-shadow 0.2s;
+        }
+        .skill-icon:hover {
+            box-shadow: 0 0 0 4px #00BFFF;
+        }
+        .tooltip {
+            visibility: hidden;
+            background: #222E36;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 0.5em 1em;
+            position: absolute;
+            z-index: 1;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-size: 1em;
+            box-shadow: 0 2px 8px rgba(0,191,255,0.10);
+        }
+        .skill-icon:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div style="position:relative;width:100%;">
+        <!-- Home Arrow Centered Top -->
+        <a href="index.html" style="position:absolute;top:2em;left:50%;transform:translateX(-50%);z-index:21;background:none;padding:0;">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18" cy="18" r="18" fill="#00BFFF"/>
+                <path d="M20 12L14 18L20 24" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <!-- Vertical nav right -->
+        <div style="position:absolute;top:50%;right:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:1.5em;">
+            <a href="about.html" class="nav-link" style="margin-bottom:1em;">About</a>
+            <a href="projects.html" class="nav-link" style="margin-bottom:1em;">Projects</a>
+            <a href="skills.html" class="nav-link" style="margin-bottom:1em;">Skills</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+        </div>
+    </div>
+    <div class="about-container fade-in" style="max-width:700px;margin:auto;">
+        <h2 class="fade-in" style="color:#fff;margin-bottom:1em;">Skills</h2>
+        <div class="skills-grid fade-in">
+            <div class="skill-icon">
+                <!-- Figma SVG -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" style="width:48px;height:48px;">
+                <span class="tooltip">Figma</span>
+            </div>
+            <div class="skill-icon">
+                <!-- React Native SVG -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" style="width:48px;height:48px;">
+                <span class="tooltip">React Native</span>
+            </div>
+            <div class="skill-icon">
+                <!-- Copilot SVG (GitHub logo as placeholder) -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Copilot" style="width:48px;height:48px;">
+                <span class="tooltip">GitHub Copilot</span>
+            </div>
+            <div class="skill-icon">
+                <!-- Tailwind CSS SVG -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" style="width:48px;height:48px;">
+                <span class="tooltip">Tailwind CSS</span>
+            </div>
+            <div class="skill-icon">
+                <!-- Poster Design (custom icon) -->
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="12" width="32" height="24" rx="4" fill="#00BFFF"/>
+                  <rect x="12" y="16" width="24" height="16" rx="2" fill="#181A20"/>
+                  <text x="24" y="28" text-anchor="middle" fill="#fff" font-size="10" font-family="Arial" dy=".3em">Poster</text>
+                </svg>
+                <span class="tooltip">Poster Design</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

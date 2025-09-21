@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Harish kumar Rajaram</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- All styles now come from style.css -->
+</head>
+<body>
+    <div style="position:relative;width:100%;">
+        <!-- Home Arrow Centered Top -->
+        <a href="index.html" style="position:absolute;top:2em;left:50%;transform:translateX(-50%);z-index:21;background:none;padding:0;">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18" cy="18" r="18" fill="#00BFFF"/>
+                <path d="M20 12L14 18L20 24" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <!-- Vertical nav right -->
+        <div style="position:absolute;top:50%;right:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:1.5em;">
+            <a href="about.html" class="nav-link" style="margin-bottom:1em;">About</a>
+            <a href="projects.html" class="nav-link" style="margin-bottom:1em;">Projects</a>
+            <a href="skills.html" class="nav-link" style="margin-bottom:1em;">Skills</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+        </div>
+    </div>
+    <div class="about-container fade-in">
+        <div style="width:100%;display:flex;flex-direction:column;align-items:center;">
+            <img src="profile.jpg" alt="Harish kumar Rajaram" class="profile-img fade-in" style="margin-top:1em;margin-bottom:1.2em;max-width:220px;max-height:220px;width:100%;height:auto;">
+        </div>
+        <div class="about-bio fade-in">
+            <strong>Harish kumar Rajaram</strong><br>
+            Designer &amp; Developer<br>
+            <span>Curious, energetic learner passionate about app prototyping, anime, remixing music, and workflow design.</span>
+        </div>
+        <h3 class="fade-in" style="margin-bottom:0.7em;">Interests</h3>
+    <div class="interests-list fade-in" style="background:#222E36;padding:1em 0.5em;border-radius:12px;box-shadow:0 2px 12px rgba(0,191,255,0.10);">
+            <span class="interest fade-in">Anime</span>
+            <span class="interest fade-in">Remixing Music</span>
+            <span class="interest fade-in">App Prototyping</span>
+            <span class="interest fade-in">Workflow Design</span>
+        </div>
+    </div>
+</body>
+</html>

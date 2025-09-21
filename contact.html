@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Say hi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            max-width: 400px;
+            margin: 5em auto 2em auto;
+            background: #F3F6FB;
+            color: #181A20;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,191,255,0.10);
+            padding: 2em 2em 2em 2em;
+        }
+        .contact-title {
+            font-size: 1.7em;
+            font-weight: 700;
+            margin-bottom: 1em;
+            color: #00BFFF;
+            text-align: center;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: 500;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.7em;
+            margin-bottom: 1em;
+            border-radius: 8px;
+            border: 1px solid #00BFFF;
+            font-size: 1em;
+        }
+        .contact-form button {
+            background: #00BFFF;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7em 2em;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: #0099cc;
+        }
+        .success-message {
+            color: #00BFFF;
+            text-align: center;
+            margin-top: 1em;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-links" style="position:absolute;top:2em;right:2em;z-index:20;">
+        <a href="index.html" class="nav-link" style="position:absolute;top:2em;left:2em;z-index:21;background:none;padding:0;">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="18" fill="#00BFFF"/>
+              <path d="M20 12L14 18L20 24" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+    </nav>
+    <div class="contact-container fade-in">
+        <div class="contact-title fade-in">Say hi</div>
+        <form class="contact-form fade-in" id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div class="success-message" id="successMessage" style="display:none;">Thank you! Your message has been sent.</div>
+    </div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simulate sending email (actual email sending requires backend)
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>

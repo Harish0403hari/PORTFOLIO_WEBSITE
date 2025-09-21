@@ -3,89 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-        <!-- Tailwind CSS CDN -->
-        <script src="https://cdn.tailwindcss.com"></script>
+    <title>Harish kumar Rajaram | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         html {
             scroll-behavior: smooth;
         }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.1s cubic-bezier(.4,0,.2,1) forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+            body {
+                background: url('https://www.transparenttextures.com/patterns/mandala.png'), linear-gradient(135deg, #f7e9d5 0%, #800000 100%);
+                color: #800000;
+                font-family: 'Merriweather', 'Georgia', serif;
+                transition: background 0.7s, color 0.7s;
+            }
+            h1, h2, h3, h4, h5, h6, .nav-link, .about-bio, .resume-title {
+                font-family: 'Merriweather', 'Georgia', serif;
+                color: #800000;
+            }
+            .container, .about-container, .resume-container {
+                background: rgba(255, 245, 230, 0.95);
+                border-radius: 18px;
+                box-shadow: 0 4px 24px rgba(128,0,0,0.10);
+                border: 2px solid #FFD700;
+                transition: box-shadow 0.7s, border 0.7s;
+            }
+            .nav-link {
+                background: #FFD700;
+                color: #800000;
+                border-radius: 8px;
+                font-weight: 600;
+                font-family: 'Merriweather', 'Georgia', serif;
+                transition: background 0.3s, color 0.3s;
+            }
+            .nav-link:hover {
+                background: #800000;
+                color: #FFD700;
+            }
     </style>
 </head>
 <body>
-    <!-- Removed duplicate navbar -->
-        <nav class="bg-gray-900 text-white shadow">
-            <div class="container mx-auto flex items-center justify-between py-4 px-6">
-                <div class="text-2xl font-bold">Harish Rajendran</div>
-                <ul class="flex space-x-6">
-                    <li><a href="#home" class="hover:text-yellow-400 font-semibold">Home</a></li>
-                    <li><a href="#about" class="hover:text-yellow-400 font-semibold">About</a></li>
-                    <li><a href="#skills" class="hover:text-yellow-400 font-semibold">Skills</a></li>
-                    <li><a href="#projects" class="hover:text-yellow-400 font-semibold">Projects</a></li>
-                    <li><a href="#contact" class="hover:text-yellow-400 font-semibold">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" class="fixed bottom-8 right-8 bg-yellow-400 text-gray-900 font-bold px-4 py-2 rounded-full shadow-lg hover:bg-yellow-300 transition-opacity opacity-0 pointer-events-none z-50">
-        ↑ Top
-    </button>
-    <section id="home">
-        <div class="container mx-auto py-16 px-6 text-center">
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-gray-900 animate-fade">Harish Rajendran</h1>
-            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-yellow-500 animate-slide">Designer &amp; Developer</h2>
-            <p class="text-lg text-gray-600 max-w-xl mx-auto animate-fade">Curious, energetic learner passionate about app prototyping, anime, remixing music, and workflow design.</p>
+    <div class="container" style="position:relative;min-height:100vh;background:#F3F6FB;">
+        <!-- Top bar -->
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:2em 2em 0 2em;">
+            <div style="font-family:cursive;font-size:2em;font-weight:bold;">HR</div>
+            <a href="resume.html" style="font-size:1.5em;font-weight:500;text-decoration:none;color:#181A20;">Resume</a>
+            <a href="contact.html" id="sayhi" style="font-size:1.2em;font-weight:500;text-decoration:none;color:#181A20;">Say hi..</a>
         </div>
-    </section>
-    <section id="about">
-        <div class="container mx-auto py-16 px-6 flex flex-col md:flex-row items-center gap-8">
-            <div>
-                <h2 class="text-3xl font-bold mb-4 text-gray-900">Bio</h2>
-                <p class="text-lg text-gray-600">Curious, energetic learner passionate about app prototyping, anime, remixing music, and workflow design.</p>
-            </div>
+        <!-- Left vertical nav -->
+        <div style="position:absolute;top:50%;left:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:1.5em;">
+            <a href="projects.html" style="writing-mode:vertical-rl;text-orientation:mixed;font-size:1.2em;font-weight:600;letter-spacing:0.1em;color:#181A20;text-decoration:none;">Projects</a>
+            <a href="https://linkedin.com/in/harish0403hari" target="_blank" class="social-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="32" height="32"/></a>
+            <a href="https://github.com/Harish0403hari" target="_blank" class="social-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="32" height="32"/></a>
+            <a href="https://twitter.com/harish0403hari" target="_blank" class="social-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" width="32" height="32"/></a>
+            <a href="mailto:harish192415@gmail.com" class="social-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="32" height="32"/></a>
         </div>
-    </section>
-    <section id="skills">
-        <div class="container mx-auto py-16 px-6">
-            <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">Skills</h2>
-            <ul class="flex flex-wrap justify-center gap-6 text-lg">
-                <li class="bg-yellow-100 px-4 py-2 rounded shadow">Figma</li>
-                <li class="bg-yellow-100 px-4 py-2 rounded shadow">React Native</li>
-                <li class="bg-yellow-100 px-4 py-2 rounded shadow">Copilot</li>
-                <li class="bg-yellow-100 px-4 py-2 rounded shadow">Poster Design</li>
-                <li class="bg-yellow-100 px-4 py-2 rounded shadow">Workflow Diagrams</li>
-            </ul>
+        <!-- Right vertical nav -->
+        <div style="position:absolute;top:50%;right:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:1.5em;">
+            <a href="feats.html" style="writing-mode:vertical-rl;text-orientation:mixed;font-size:1.2em;font-weight:600;letter-spacing:0.1em;color:#181A20;text-decoration:none;">Feats</a>
         </div>
-    </section>
-    <section id="projects">
-        <div class="container mx-auto py-16 px-6">
-            <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col animate-fade">
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">UPI Transaction Log App</h3>
-                    <p class="text-gray-600 mb-4">A simple app to log and visualize UPI transactions.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col animate-fade">
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Poster Layout Experiments</h3>
-                    <p class="text-gray-600 mb-4">Creative poster design and layout explorations.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col animate-fade">
-                    <h3 class="text-xl font-bold mb-2 text-gray-800">Portfolio Website</h3>
-                    <p class="text-gray-600 mb-4">This personal portfolio website, built with HTML, CSS, and JavaScript.</p>
-                    <a href="https://github.com/Harish0403hari/portfolio_website" target="_blank" class="mt-auto inline-block bg-yellow-400 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition">View on GitHub</a>
-                </div>
-            </div>
+        <!-- Bottom nav -->
+        <div style="position:absolute;bottom:2em;left:2em;font-size:1.2em;font-weight:500;"><a href="about.html" style="color:#181A20;text-decoration:none;">About</a></div>
+        <div style="position:absolute;bottom:2em;right:2em;font-size:1.2em;font-weight:500;"><a href="skills.html" style="color:#181A20;text-decoration:none;">My Skills</a></div>
+        <!-- Center GIF -->
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;">
+            <img src="https://media.giphy.com/media/3o6ZtpxSZbQRRnwCKQ/giphy.gif" alt="Kung Fu Panda" style="width:260px;height:260px;border-radius:50%;box-shadow:0 2px 12px rgba(0,191,255,0.10);"/>
+            <div style="margin-top:1em;font-size:1.1em;color:#181A20;">click here</div>
         </div>
-    </section>
-    <section id="contact">
-        <div class="container mx-auto py-16 px-6">
-            <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">Contact</h2>
-            <div class="max-w-lg mx-auto bg-white rounded-xl shadow-lg p-8 flex flex-col gap-6 text-center">
-                <p class="text-lg text-gray-700">Email: <a href="mailto:harish192415@gmail.com" class="text-yellow-500 hover:underline">harish192415@gmail.com</a></p>
-                <p class="text-lg text-gray-700">GitHub: <a href="https://github.com/Harish0403hari" target="_blank" class="text-yellow-500 hover:underline">Harish0403hari</a></p>
-            </div>
-        </div>
-    </section>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Harish kumar Rajaram</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        <!-- All styles now come from style.css -->
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+        .projects-container {
+            max-width: 1000px;
+            margin: 3em auto;
+            padding: 2em 1em;
+        }
+        .projects-title {
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 2em;
+            color: #222;
+        }
+        .project-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: center;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            padding: 2em 1.2em;
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+        }
+        .project-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            color: #181717;
+        }
+        .project-desc {
+            color: #444;
+            margin-bottom: 1em;
+        }
+        .tech-stack {
+            font-size: 0.98em;
+            color: #555;
+            margin-bottom: 1em;
+        }
+        .github-link {
+            margin-top: auto;
+            color: #fff;
+            background: #181717;
+            padding: 0.5em 1em;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .github-link:hover {
+            background: #0A66C2;
+        }
+        @media (max-width: 700px) {
+            .project-cards {
+                flex-direction: column;
+                gap: 1.2em;
+                align-items: center;
+            }
+            .project-card {
+                width: 95vw;
+                max-width: 340px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-links" style="position:absolute;top:2em;right:2em;z-index:20;">
+        <div style="position:relative;width:100%;">
+            <!-- Home Arrow Centered Top -->
+            <a href="index.html" style="position:absolute;top:2em;left:50%;transform:translateX(-50%);z-index:21;background:none;padding:0;">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="18" fill="#00BFFF"/>
+                    <path d="M20 12L14 18L20 24" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <!-- Vertical nav right -->
+            <div style="position:absolute;top:50%;right:0;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:1.5em;">
+                <a href="about.html" class="nav-link" style="margin-bottom:1em;">About</a>
+                <a href="projects.html" class="nav-link" style="margin-bottom:1em;">Projects</a>
+                <a href="skills.html" class="nav-link" style="margin-bottom:1em;">Skills</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+            </div>
+        </div>
+    <div class="projects-container fade-in">
+        <div class="projects-title fade-in" style="animation-delay:0.1s">Projects</div>
+        <div class="project-cards">
+            <div class="project-card fade-in" style="animation-delay:0.2s">
+                <div class="project-title">UPI Transaction Log App</div>
+                <div class="project-desc">A simple app to log and visualize UPI transactions.</div>
+                <div class="tech-stack">Tech Stack: React Native, Firebase</div>
+                <a href="https://github.com/Harish0403hari/upi-log-app" target="_blank" class="github-link">GitHub</a>
+            </div>
+            <div class="project-card fade-in" style="animation-delay:0.35s">
+                <div class="project-title">Poster Layout Experiments</div>
+                <div class="project-desc">Creative poster design and layout explorations.</div>
+                <div class="tech-stack">Tech Stack: Figma, Photoshop</div>
+                <a href="https://github.com/Harish0403hari/poster-layouts" target="_blank" class="github-link">GitHub</a>
+            </div>
+            <div class="project-card fade-in" style="animation-delay:0.5s">
+                <div class="project-title">Portfolio Website</div>
+                <div class="project-desc">This personal portfolio website, built with HTML, CSS, and JavaScript.</div>
+                <div class="tech-stack">Tech Stack: HTML, CSS, JavaScript</div>
+                <a href="https://github.com/Harish0403hari/portfolio_website" target="_blank" class="github-link">GitHub</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
