@@ -76,11 +76,39 @@
         <div style="position:absolute;bottom:2em;left:2em;font-size:1.2em;font-weight:500;"><a href="about.html" style="color:#181A20;text-decoration:none;">About</a></div>
         <div style="position:absolute;bottom:2em;right:2em;font-size:1.2em;font-weight:500;"><a href="skills.html" style="color:#181A20;text-decoration:none;">My Skills</a></div>
         <!-- Center GIF -->
-        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;">
-            <img src="giphy.gif" alt="Kung Fu Panda" />
+        <div class="center-gif-block">
+            <img src="giphy.gif" alt="Kung Fu Panda" class="responsive-gif" />
             <br>
-            <a href="introduce.html" id="showIntroBtn" style="margin-top:1.2em;display:inline-block;font-size:1.15em;font-weight:600;color:#800000;background:#FFD700;border:2px solid #800000;border-radius:8px;padding:0.5em 1.2em;text-decoration:none;box-shadow:0 2px 8px rgba(128,0,0,0.10);transition:box-shadow 0.3s,background 0.3s;cursor:pointer;">Click Here</a>
+            <a href="introduce.html" id="showIntroBtn" class="responsive-btn">Click Here</a>
         </div>
+        <style>
+        @media (max-width: 700px) {
+            .center-gif-block {
+                position: static !important;
+                margin: 2em auto 0 auto !important;
+                text-align: center !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                z-index: 1;
+            }
+            .responsive-gif {
+                width: 160px !important;
+                height: 160px !important;
+                max-width: 90vw !important;
+                max-height: 40vw !important;
+                border-radius: 50%;
+                box-shadow: 0 2px 8px rgba(128,0,0,0.10);
+            }
+            .responsive-btn {
+                margin-top: 1em !important;
+                font-size: 1em !important;
+                padding: 0.5em 1em !important;
+            }
+        }
+        </style>
     </div>
     <!-- No modal script needed, direct navigation only -->
     <script src="script.js"></script>
